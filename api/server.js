@@ -13,6 +13,7 @@ import cors from "cors";
 import jwt from "jsonwebtoken"
 dotenv.config();
 const app = express();
+const port=process.env.PORT
 
 // const token=jwt.sign({id: user._id,isSeller: user.isSeller,},process.env.JWT_SECRET)
 // const token = jwt.sign(
