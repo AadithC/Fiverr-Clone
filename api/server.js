@@ -33,7 +33,13 @@ const connect = async () => {
   }
 };
 
-app.use(cors({ origin: "http://localhost:5173", credentials: true }));
+const allowedOrigins = [
+  "http://localhost:5173", // for local dev
+  "https://fiverr-clone-2ukq.onrender.com", // deployed frontend
+];
+
+
+app.use(cors({ origin: allowedOrigins, credentials: true }));
 app.use(express.json());
 app.use(cookieParser());
 
